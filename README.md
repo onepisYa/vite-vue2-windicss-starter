@@ -1,3 +1,27 @@
+<!--
+ * @Author: onepisYa pis1@qq.com
+ * @Date: 2022-08-30 09:57:54
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-08-30 13:46:08
+ * @FilePath: /vite-vue2-windicss-starter/README.md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+
+<h1> 本分支是为了练习而建立。 </h1>
+
+
+<h2>练习内容</h2>
+
++ Composition Api 
++ VueUse
++ pinia  
++ ts 
++ vue-tailwind
+* 自己新增了 [pinia](https://pinia.vuejs.org/core-concepts/#option-stores)
+* [vue-tailwind](https://www.vue-tailwind.com/docs/installation)
+* ts 学习笔记 [study-ts](https://gitee.com/onepisYa/study-ts)
+
+<hr>
 <h1 align="center">Vite ⚡ - Vue 2 starter template</h1>
 
 <p align="center">
@@ -18,6 +42,7 @@
 * 😃 [Use icons from any icon sets, with no compromise](https://github.com/antfu/unplugin-icons)
 * 🧰 [VueUse](https://github.com/vueuse/vueuse) - Collection of essential Vue Composition Utilities
 * 🦾 Typescript, of course
+
 
 ## Vite plugins
 
@@ -46,7 +71,7 @@ If you prefer to do it manually with a cleaner git history
 ```bash
 npx degit lstoeferle/vite-vue2-windicss-starter my-vite-vue2-app
 cd my-vite-vue2-app
-yarn install
+pnpm run install
 ```
 
 ## Usage
@@ -56,7 +81,7 @@ yarn install
 Just run and visit [http://localhost:3333](http://localhost:3333)
 
 ```bash
-yarn dev
+pnpm run dev
 ```
 
 ### Build
@@ -64,7 +89,7 @@ yarn dev
 To build the App, run
 
 ```bash
-yarn build
+pnpm run build
 ```
 
 And you will see the generated files in `dist`, which are ready to be served.

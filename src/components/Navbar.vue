@@ -1,3 +1,11 @@
+<!--
+ * @Author:
+ * @Date: 2022-08-30 09:57:54
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-08-30 21:42:44
+ * @FilePath: /vite-vue2-windicss-starter/src/components/Navbar.vue
+ * @Description:
+-->
 <script setup lang="ts">
 import { computed, getCurrentInstance } from 'vue'
 import { routes } from '@/router'
@@ -15,11 +23,26 @@ const toggle = useToggle(isDark)
 <template>
   <header class="text-gray-600 body-font dark:bg-gray-800">
     <div
-      class="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row"
+      class="
+        container
+        flex flex-col flex-wrap
+        items-center
+        p-5
+        mx-auto
+        md:flex-row
+      "
     >
       <RouterLink
         :to="{ name: 'Home' }"
-        class="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0"
+        class="
+          flex
+          items-center
+          mb-4
+          font-medium
+          text-gray-900
+          title-font
+          md:mb-0
+        "
       >
         <img alt="Vite logo" src="@/assets/vite-logo.svg" width="36px">
         <span class="ml-3 text-xl dark:text-white">
@@ -44,7 +67,16 @@ const toggle = useToggle(isDark)
           {{ route.name }}
         </RouterLink>
         <RouterLink
-          class="flex items-center justify-center mr-2 text-black w-9 h-9 dark:text-white"
+          class="
+            flex
+            items-center
+            justify-center
+            mr-2
+            text-black
+            w-9
+            h-9
+            dark:text-white
+          "
           to="/aliens"
         >
           <MdiAlien />
@@ -52,7 +84,16 @@ const toggle = useToggle(isDark)
         <a
           href="https://github.com/lstoeferle/vite-vue2-windicss-starter"
           target="_blank"
-          class="flex items-center justify-center mr-2 text-black w-9 h-9 dark:text-white"
+          class="
+            flex
+            items-center
+            justify-center
+            mr-2
+            text-black
+            w-9
+            h-9
+            dark:text-white
+          "
         >
           <MdiGithub />
         </a>
