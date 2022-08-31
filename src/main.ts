@@ -1,4 +1,3 @@
-import * as d3 from 'd3'
 import VueTailwind from 'vue-tailwind'
 
 import Vue from 'vue'
@@ -12,9 +11,6 @@ Vue.use(PiniaVuePlugin)
 const pinia = createPinia()
 Vue.config.productionTip = false
 Vue.config.devtools = true
-
-// 设置一个全局的 d3
-window.d3 = d3
 
 Vue.use(VueTailwind, components)
 

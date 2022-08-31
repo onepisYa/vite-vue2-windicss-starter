@@ -2,7 +2,7 @@
  * @Author: onepisYa pis1@qq.com
  * @Date: 2022-08-30 10:32:12
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-08-30 21:48:37
+ * @LastEditTime: 2022-08-31 13:04:44
  * @FilePath: /vite-vue2-windicss-starter/vite.config.js
  * @Description: 笔记 https://gitee.com/onepisYa/vite_test/blob/master/vite-vue3-js/vite.config.js
  */
@@ -32,7 +32,8 @@ const config = defineConfig({
     Components({
       resolvers: [
         IconsResolver({
-          componentPrefix: '',
+          componentPrefix: 'onepisya',
+          // {prefix}-{collection}-{icon}
         }),
       ],
       dts: 'src/components.d.ts',

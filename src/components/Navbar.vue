@@ -2,7 +2,7 @@
  * @Author:
  * @Date: 2022-08-30 09:57:54
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-08-30 21:42:44
+ * @LastEditTime: 2022-08-31 13:28:35
  * @FilePath: /vite-vue2-windicss-starter/src/components/Navbar.vue
  * @Description:
 -->
@@ -79,7 +79,7 @@ const toggle = useToggle(isDark)
           "
           to="/aliens"
         >
-          <MdiAlien />
+          <onepisyaMdiAlien />
         </RouterLink>
         <a
           href="https://github.com/lstoeferle/vite-vue2-windicss-starter"
@@ -95,14 +95,16 @@ const toggle = useToggle(isDark)
             dark:text-white
           "
         >
-          <MdiGithub />
+          <onepisyaMdiGithub />
         </a>
         <button
           class="flex items-center justify-center w-9 h-9 focus:outline-none"
           @click="toggle()"
         >
-          <MdiWhiteBalanceSunny v-if="isDark" class="text-yellow-500" />
-          <MdiMoonWaningCrescent v-else class="text-gray-800" />
+          <onepisyaMdiWhiteBalanceSunny v-if="isDark" class="text-yellow-500" />
+          <!-- mdi:white-balance-sunny -->
+          <!-- ep:sunrise -->
+          <onepisyaMdiMoonWaningCrescent v-else class="text-gray-800" />
         </button>
       </nav>
     </div>

@@ -8,7 +8,15 @@ defineProps({
 
 <template>
   <div
-    class="flex flex-col h-full p-8 bg-gray-100 rounded-lg items dark:bg-gray-700"
+    class="
+      flex flex-col
+      h-full
+      p-8
+      bg-gray-100
+      rounded-lg
+      items
+      dark:bg-gray-700
+    "
   >
     <Heading2>
       {{ title }}
@@ -24,7 +32,7 @@ defineProps({
         class="inline-flex items-center mt-3 text-green-500"
       >
         Learn More
-        <MdiArrowRight class="ml-1" />
+        <onepisyaMdiArrowRight class="ml-1" />
       </a>
     </div>
   </div>
