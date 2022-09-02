@@ -2,7 +2,7 @@
  * @Author: onepisYa pis1@qq.com
  * @Date: 2022-08-30 10:32:12
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-08-31 13:04:44
+ * @LastEditTime: 2022-09-01 17:26:20
  * @FilePath: /vite-vue2-windicss-starter/vite.config.js
  * @Description: 笔记 https://gitee.com/onepisYa/vite_test/blob/master/vite-vue3-js/vite.config.js
  */
@@ -15,13 +15,20 @@ import Icons from 'unplugin-icons/vite'// 图标配置
 import IconsResolver from 'unplugin-icons/resolver'
 import AutoImport from 'unplugin-auto-import/vite' // 自动导入 api
 
+// 区分生产环境以及开发环境
+if (process.env.NODE_ENV === 'development') {
+  console.log(`${new Date().toLocaleString()} - [ENV] :`, process.env.NODE_ENV)
+}
+else if (process.env.NODE_ENV === 'production') { // 生产环境
+  console.log(`${new Date().toLocaleString()} - [ENV] :`, process.env.NODE_ENV)
+}
+
 const config = defineConfig({
   resolve: {
     alias: {
       '@': `${path.resolve(__dirname, 'src')}`,
     },
   },
-
   build: {
     minify: true,
   },

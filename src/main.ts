@@ -3,7 +3,7 @@ import VueTailwind from 'vue-tailwind'
 import Vue from 'vue'
 import 'windi.css'
 import { PiniaVuePlugin, createPinia } from 'pinia'
-import { components } from './setting-tailwind-vue'
+import { components } from '@/setting-tailwind-vue'
 import router from '@/router'
 import App from '@/App.vue'
 

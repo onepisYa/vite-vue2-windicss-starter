@@ -332,6 +332,6 @@
   // 自动闭合标签，标签重命名，颜色括号匹配。
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.linkedEditing": true,
-  "html.autoClosingTags": true
-  ,"editor.experimental.stickyScroll.enabled": true
+  "html.autoClosingTags": true,
+  "editor.stickyScroll.enabled": true
 }

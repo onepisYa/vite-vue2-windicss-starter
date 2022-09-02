@@ -1,3 +1,11 @@
+<!--
+ * @Author:
+ * @Date: 2022-09-01 16:10:43
+ * @LastEditors:
+ * @LastEditTime: 2022-09-02 16:47:32
+ * @FilePath: /vite-vue2-windicss-starter/src/views/Test.vue
+ * @Description:
+-->
 <template>
   <div>
     <Hero
@@ -7,6 +15,8 @@
     <TestTailWindVueCom />
     <TestD3 />
     <TestPinia />
+    <TestAxios />
+    <!-- <TestMqtt /> -->
     <hr>
   </div>
 </template>
