@@ -47,10 +47,10 @@ declare module '@vue/runtime-core' {
     OnepisyaMdiWhiteBalanceSunny: typeof import('~icons/mdi/white-balance-sunny')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TestAxios: typeof import('./components/TestAxios.vue')['default']
-    TestD3: typeof import('./components/TestD3.vue')['default']
-    TestMqtt: typeof import('./components/TestMqtt.vue')['default']
-    TestPinia: typeof import('./components/TestPinia.vue')['default']
-    TestTailWindVueCom: typeof import('./components/TestTailWindVueCom.vue')['default']
+    TestAxios: typeof import('./components/test/TestAxios.vue')['default']
+    TestD3: typeof import('./components/test/TestD3.vue')['default']
+    TestMqtt: typeof import('./components/test/TestMqtt.vue')['default']
+    TestPinia: typeof import('./components/test/TestPinia.vue')['default']
+    TestTailWindVueCom: typeof import('./components/test/TestTailWindVueCom.vue')['default']
   }
 }

@@ -1,3 +1,11 @@
+<!--
+ * @Author:
+ * @Date: 2022-09-03 20:29:51
+ * @LastEditors:
+ * @LastEditTime: 2022-09-04 00:34:14
+ * @FilePath: /vite-vue2-windicss-starter/src/components/test/TestPinia.vue
+ * @Description:
+-->
 <script lang="ts">
 import { mapActions, mapState, mapStores, mapWritableState } from 'pinia'
 import { defineComponent } from 'vue'
@@ -52,10 +60,10 @@ counter.increment()
 
 <template>
   <div>
-    <t-button @click="counter.increment">
+    <t-button class="mb-2" @click="counter.increment">
       increment {{ counter.count }}
     </t-button>
-    <t-button @click="counterSecondStore.increment">
+    <t-button class="mb-2" @click="counterSecondStore.increment">
       increment {{ counterSecondStore.count }}
     </t-button>
   </div>

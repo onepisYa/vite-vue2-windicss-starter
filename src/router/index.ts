@@ -11,7 +11,7 @@ import type { RouteConfig } from 'vue-router'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import NotFound from '@/views/NotFound.vue'
-import Test from '@/views/Test.vue'
+import Test from '@/views/Test/Test.vue'
 
 Vue.use(VueRouter)
 
