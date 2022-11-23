@@ -2,7 +2,7 @@
  * @Author:
  * @Date: 2022-09-01 16:13:57
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-09-04 00:33:21
+ * @LastEditTime: 2022-11-23 09:54:00
  * @FilePath: /vite-vue2-windicss-starter/src/components/test/TestAxios.vue
  * @Description:
 -->
@@ -50,8 +50,10 @@ request({ url: 'https://jsonplaceholder.typicode.com/todos/1', method: 'GET' })
 
 <template>
   <div>
-    <t-alert class="mb-2" variant="danger" show>
+    <button
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+    >
       in axios {{ foo }}
-    </t-alert>
+    </button>
   </div>
 </template>

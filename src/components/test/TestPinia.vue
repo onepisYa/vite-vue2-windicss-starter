@@ -1,8 +1,8 @@
 <!--
  * @Author:
  * @Date: 2022-09-03 20:29:51
- * @LastEditors:
- * @LastEditTime: 2022-09-04 00:34:14
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-11-23 09:52:47
  * @FilePath: /vite-vue2-windicss-starter/src/components/test/TestPinia.vue
  * @Description:
 -->
@@ -60,11 +60,18 @@ counter.increment()
 
 <template>
   <div>
-    <t-button class="mb-2" @click="counter.increment">
+    <button
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      @click="counter.increment"
+    >
       increment {{ counter.count }}
-    </t-button>
-    <t-button class="mb-2" @click="counterSecondStore.increment">
+    </button>
+
+    <button
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      @click="counterSecondStore.increment"
+    >
       increment {{ counterSecondStore.count }}
-    </t-button>
+    </button>
   </div>
 </template>

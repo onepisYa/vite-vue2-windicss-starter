@@ -2,7 +2,7 @@
  * @Author: onepisYa pis1@qq.com
  * @Date: 2022-08-30 09:57:54
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-08-30 13:46:08
+ * @LastEditTime: 2022-11-23 09:47:22
  * @FilePath: /vite-vue2-windicss-starter/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -18,7 +18,6 @@
 + ts 
 + vue-tailwind
 * 自己新增了 [pinia](https://pinia.vuejs.org/core-concepts/#option-stores)
-* [vue-tailwind](https://www.vue-tailwind.com/docs/installation)
 * ts 学习笔记 [study-ts](https://gitee.com/onepisYa/study-ts)
 
 <hr>
