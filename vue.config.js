@@ -123,9 +123,11 @@ module.exports = {
       )
   },
 
-  // pluginOptions: {
-  // // see https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts
-  //   windicss: {
-  //   }
-  // }
+  pluginOptions: {
+    // see https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts
+    windicss: {
+      // 取消 tailwind 的 reset normalize css
+      preflight: false
+    }
+  }
 }

@@ -12,19 +12,18 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 // 区分生产环境以及开发环境
 if (process.env.NODE_ENV === 'development') {
   console.log(`${new Date().toLocaleString()} - [ENV] :`, process.env.NODE_ENV)
-}
-else if (process.env.NODE_ENV === 'production') { // 生产环境
+} else if (process.env.NODE_ENV === 'production') { // 生产环境
   console.log(`${new Date().toLocaleString()} - [ENV] :`, process.env.NODE_ENV)
 }
 
 const config = defineConfig({
   resolve: {
     alias: {
-      '@': `${path.resolve(__dirname, 'src')}`,
-    },
+      '@': `${path.resolve(__dirname, 'src')}`
+    }
   },
   build: {
-    minify: true,
+    minify: true
   },
   plugins: [
     vue(),
@@ -33,11 +32,11 @@ const config = defineConfig({
     Components({
       resolvers: [
         IconsResolver({
-          componentPrefix: 'onepisya',
+          componentPrefix: 'onepisya'
           // {prefix}-{collection}-{icon}
-        }),
+        })
       ],
-      dts: 'src/components.d.ts',
+      dts: 'src/components.d.ts'
     }),
     Icons(),
     // 图标配置 插件配置
@@ -51,10 +50,10 @@ const config = defineConfig({
     AutoImport({
       imports: [
         '@vueuse/core',
-        { axios: [['default', 'axios']] },
+        { axios: [['default', 'axios']] }
       ],
-      dts: 'src/auto-imports.d.ts',
-    },
+      dts: 'src/auto-imports.d.ts'
+    }
     ),
     // svgIcon
     createSvgIconsPlugin({
@@ -71,13 +70,13 @@ const config = defineConfig({
        * custom dom id
        * @default: __svg__icons__dom__
        */
-      customDomId: '__svg__icons__dom__',
-    }),
+      customDomId: '__svg__icons__dom__'
+    })
   ],
 
   server: {
-    port: 3333,
-  },
+    port: 3333
+  }
 })
 
 export default config
