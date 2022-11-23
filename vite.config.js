@@ -2,7 +2,7 @@
  * @Author: onepisYa pis1@qq.com
  * @Date: 2022-08-30 10:32:12
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-09-01 17:26:20
+ * @LastEditTime: 2022-11-23 11:28:19
  * @FilePath: /vite-vue2-windicss-starter/vite.config.js
  * @Description: 笔记 https://gitee.com/onepisYa/vite_test/blob/master/vite-vue3-js/vite.config.js
  */
@@ -14,6 +14,7 @@ import Components from 'unplugin-vue-components/vite'// 自动导入 组件
 import Icons from 'unplugin-icons/vite'// 图标配置
 import IconsResolver from 'unplugin-icons/resolver'
 import AutoImport from 'unplugin-auto-import/vite' // 自动导入 api
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 // 区分生产环境以及开发环境
 if (process.env.NODE_ENV === 'development') {
@@ -62,6 +63,23 @@ const config = defineConfig({
       dts: 'src/auto-imports.d.ts',
     },
     ),
+    // svgIcon
+    createSvgIconsPlugin({
+      // 指定需要缓存的图标文件夹
+      iconDirs: [path.resolve(process.cwd(), 'src/icons/svg')],
+      // 指定symbolId格式
+      symbolId: 'icon-[dir]-[name]',
+      /**
+       * 自定义插入位置
+       * @default: body-last
+       */
+      inject: 'body-last' | 'body-first',
+      /**
+       * custom dom id
+       * @default: __svg__icons__dom__
+       */
+      customDomId: '__svg__icons__dom__',
+    }),
   ],
 
   server: {

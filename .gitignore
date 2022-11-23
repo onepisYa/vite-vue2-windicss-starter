@@ -221,7 +221,6 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -288,3 +287,6 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/vue,node,macos,windows,linux,vscode,intellij+all
 src/components/test/TestMqttOptions.ts
+
+# Ignores dist
+dist/

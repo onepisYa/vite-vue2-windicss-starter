@@ -10,6 +10,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "allowJs":true,
     "baseUrl": ".",
     "types": [
       "@vueuse/core"
@@ -32,11 +33,15 @@
     "src/**/*.vue",
     "src/**/*.d.ts",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
+    "tests/**/*.tsx",
+    "src/**/*.js", 
+    "src/**/**/*.js",
+   ],
   "exclude": [
-    "node_modules"
+    "node_modules", "dist/*.js", 
+    "**/dist/*.js"
   ],
+"checkJs": false, 
   "vueCompilerOptions": {
     "target": 2.7
   }

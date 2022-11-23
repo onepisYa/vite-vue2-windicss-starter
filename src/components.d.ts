@@ -7,11 +7,15 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Breadcrumb: typeof import('./components/Breadcrumb/index.vue')['default']
     ButtonPrimary: typeof import('./components/shared/ButtonPrimary.vue')['default']
     ButtonSecondary: typeof import('./components/shared/ButtonSecondary.vue')['default']
     Circle: typeof import('~icons/ci/rcle')['default']
+    copy: typeof import('./components/SvgIcon/index copy.vue')['default']
+    ErrorLog: typeof import('./components/ErrorLog/index.vue')['default']
     Feature: typeof import('./components/Feature.vue')['default']
     Features: typeof import('./components/Features.vue')['default']
+    Hamburger: typeof import('./components/Hamburger/index.vue')['default']
     Heading1: typeof import('./components/shared/Heading1.vue')['default']
     Heading2: typeof import('./components/shared/Heading2.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
@@ -47,10 +51,11 @@ declare module '@vue/runtime-core' {
     OnepisyaMdiWhiteBalanceSunny: typeof import('~icons/mdi/white-balance-sunny')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SvgIcon: typeof import('./components/SvgIcon/index.vue')['default']
     TestAxios: typeof import('./components/test/TestAxios.vue')['default']
     TestD3: typeof import('./components/test/TestD3.vue')['default']
-    TestMqtt: typeof import('./components/test/TestMqtt.vue')['default']
     TestPinia: typeof import('./components/test/TestPinia.vue')['default']
     TestTailWindVueCom: typeof import('./components/test/TestTailWindVueCom.vue')['default']
+    ThemePicker: typeof import('./components/ThemePicker/index.vue')['default']
   }
 }
