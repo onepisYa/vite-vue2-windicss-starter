@@ -1,104 +1,243 @@
-<!--
- * @Author: onepisYa pis1@qq.com
- * @Date: 2022-08-30 09:57:54
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-11-23 09:47:22
- * @FilePath: /vite-vue2-windicss-starter/README.md
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
-
-<h1> 本分支是为了练习而建立。 </h1>
-
-
-<h2>练习内容</h2>
-
-+ Composition Api 
-+ VueUse
-+ pinia  
-+ ts 
-+ vue-tailwind
-* 自己新增了 [pinia](https://pinia.vuejs.org/core-concepts/#option-stores)
-* ts 学习笔记 [study-ts](https://gitee.com/onepisYa/study-ts)
-
-<hr>
-<h1 align="center">Vite ⚡ - Vue 2 starter template</h1>
-
 <p align="center">
-  Create a Vue 2 application bundled by the lightning fast build tool <a href="https://github.com/vitejs/vite">Vite</a>
+  <img width="320" src="https://wpimg.wallstcn.com/ecc53a42-d79b-42e2-8852-5126b810a4c8.svg">
 </p>
 
 <p align="center">
- <a href="https://vite-vue2-starter.netlify.app"> ✨ Live Demo</a>
+  <a href="https://github.com/vuejs/vue">
+    <img src="https://img.shields.io/badge/vue-2.6.10-brightgreen.svg" alt="vue">
+  </a>
+  <a href="https://github.com/ElemeFE/element">
+    <img src="https://img.shields.io/badge/element--ui-2.7.0-brightgreen.svg" alt="element-ui">
+  </a>
+  <a href="https://travis-ci.org/PanJiaChen/vue-element-admin" rel="nofollow">
+    <img src="https://travis-ci.org/PanJiaChen/vue-element-admin.svg?branch=master" alt="Build Status">
+  </a>
+  <a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license">
+  </a>
+  <a href="https://github.com/PanJiaChen/vue-element-admin/releases">
+    <img src="https://img.shields.io/github/release/PanJiaChen/vue-element-admin.svg" alt="GitHub release">
+  </a>
+  <a href="https://gitter.im/vue-element-admin/discuss">
+    <img src="https://badges.gitter.im/Join%20Chat.svg" alt="gitter">
+  </a>
+  <a href="https://panjiachen.github.io/vue-element-admin-site/donate">
+    <img src="https://img.shields.io/badge/%24-donate-ff69b4.svg" alt="donate">
+  </a>
 </p>
+
+English | [简体中文](./README.zh-CN.md) | [日本語](./README.ja.md) | [Spanish](./README.es.md)
+
+<p align="center">
+  <b>SPONSORED BY</b>
+</p>
+<table align="center" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td align="center" valign="middle">
+       <a href="https://www.vform666.com/" title="variantForm" target="_blank" style="padding-right: 20px;">
+        <img height="200px" style="padding-right: 20px;" src="https://s3.bmp.ovh/imgs/2022/04/11/3379c1c1cf2e3228.png" title="variantForm">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Introduction
+
+[vue-element-admin](https://panjiachen.github.io/vue-element-admin) is a production-ready front-end solution for admin interfaces. It is based on [vue](https://github.com/vuejs/vue) and uses the UI Toolkit [element-ui](https://github.com/ElemeFE/element).
+
+[vue-element-admin](https://panjiachen.github.io/vue-element-admin) is based on the newest development stack of vue and it has a built-in i18n solution, typical templates for enterprise applications, and lots of awesome features. It helps you build large and complex Single-Page Applications. I believe whatever your needs are, this project will help you.
+
+- [Preview](https://panjiachen.github.io/vue-element-admin)
+
+- [Documentation](https://panjiachen.github.io/vue-element-admin-site/)
+
+- [Gitter](https://gitter.im/vue-element-admin/discuss)
+
+- [Donate](https://panjiachen.github.io/vue-element-admin-site/donate/)
+
+- [Wiki](https://github.com/PanJiaChen/vue-element-admin/wiki)
+
+- [Gitee](https://panjiachen.gitee.io/vue-element-admin/) 国内用户可访问该地址在线预览
+
+- Base template recommends using: [vue-admin-template](https://github.com/PanJiaChen/vue-admin-template)
+- Desktop: [electron-vue-admin](https://github.com/PanJiaChen/electron-vue-admin)
+- Typescript: [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template) (Credits: [@Armour](https://github.com/Armour))
+- [awesome-project](https://github.com/PanJiaChen/vue-element-admin/issues/2312)
+
+**After the `v4.1.0+` version, the default master branch will not support i18n. Please use [i18n Branch](https://github.com/PanJiaChen/vue-element-admin/tree/i18n), it will keep up with the master update**
+
+**The current version is `v4.0+` build on `vue-cli`. If you find a problem, please put [issue](https://github.com/PanJiaChen/vue-element-admin/issues/new). If you want to use the old version , you can switch branch to [tag/3.11.0](https://github.com/PanJiaChen/vue-element-admin/tree/tag/3.11.0), it does not rely on `vue-cli`**
+
+**This project does not support low version browsers (e.g. IE). Please add polyfill by yourself.**
+
+## Preparation
+
+You need to install [node](https://nodejs.org/) and [git](https://git-scm.com/) locally. The project is based on [ES2015+](https://es6.ruanyifeng.com/), [vue](https://cn.vuejs.org/index.html), [vuex](https://vuex.vuejs.org/zh-cn/), [vue-router](https://router.vuejs.org/zh-cn/), [vue-cli](https://github.com/vuejs/vue-cli) , [axios](https://github.com/axios/axios) and [element-ui](https://github.com/ElemeFE/element), all request data is simulated using [Mock.js](https://github.com/nuysoft/Mock).
+Understanding and learning this knowledge in advance will greatly help the use of this project.
+
+[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/PanJiaChen/vue-element-admin/tree/CodeSandbox)
+
+<p align="center">
+  <img width="900" src="https://wpimg.wallstcn.com/a5894c1b-f6af-456e-82df-1151da0839bf.png">
+</p>
+
+## Sponsors
+
+Become a sponsor and get your logo on our README on GitHub with a link to your site. [[Become a sponsor]](https://www.patreon.com/panjiachen)
+
+### Akveo
+<a href="https://store.akveo.com/products/vue-java-admin-dashboard-spring?utm_campaign=akveo_store-Vue-Vue_demo%2Fgithub&utm_source=vue_admin&utm_medium=referral&utm_content=github_banner"><img width="500px" src="https://raw.githubusercontent.com/PanJiaChen/vue-element-admin-site/master/docs/.vuepress/public/images/vue-java-banner.png" /></a><p>Get Java backend for Vue admin with 20% discount for 39$ use coupon code SWB0RAZPZR1M
+</p>
+
+### Flatlogic
+
+<a href="https://flatlogic.com/admin-dashboards?from=vue-element-admin"><img width="150px" src="https://wpimg.wallstcn.com/9c0b719b-5551-4c1e-b776-63994632d94a.png" /></a><p>Admin Dashboard Templates made with Vue, React and Angular.</p>
 
 ## Features
 
-* ⚡️ [Vite](https://github.com/vitejs/vite), [Vue 2](https://github.com/vuejs/vue) - lightning fast
-* 📦 [Components auto importing](https://github.com/antfu/unplugin-vue-components)
-* 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
-* 🚦 [Vue-Router](https://github.com/vuejs/vue-router)
-* 🎨 [Windi CSS](https://github.com/windicss/vite-plugin-windicss) - next generation utility-first CSS framework
-* 😃 [Use icons from any icon sets, with no compromise](https://github.com/antfu/unplugin-icons)
-* 🧰 [VueUse](https://github.com/vueuse/vueuse) - Collection of essential Vue Composition Utilities
-* 🦾 Typescript, of course
+```
+- Login / Logout
 
+- Permission Authentication
+  - Page permission
+  - Directive permission
+  - Permission configuration page
+  - Two-step login
 
-## Vite plugins
+- Multi-environment build
+  - Develop (dev)
+  - sit
+  - Stage Test (stage)
+  - Production (prod)
 
-* [`@vitejs/plugin-vue2`](https://github.com/vitejs/vite-plugin-vue2) -
-  Vue 2 support for Vite
-* [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) -
-  importing Vue components on-demand
-* [`unplugin-unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) -
-  importing APIs like CompositionAPI on-demand
-* [`vite-plugin-windicss`](https://github.com/windicss/vite-plugin-windicss) - 
-  easy WindiCSS integration
-* [`unplugin-icons`](https://github.com/antfu/unplugin-icons) -
-  importing icons as Vue components on-demand
+- Global Features
+  - I18n
+  - Multiple dynamic themes
+  - Dynamic sidebar (supports multi-level routing)
+  - Dynamic breadcrumb
+  - Tags-view (Tab page Support right-click operation)
+  - Svg Sprite
+  - Mock data
+  - Screenfull
+  - Responsive Sidebar
 
+- Editor
+  - Rich Text Editor
+  - Markdown Editor
+  - JSON Editor
 
-## Try it now!
+- Excel
+  - Export Excel
+  - Upload Excel
+  - Visualization Excel
+  - Export zip
 
-### GitHub Template
+- Table
+  - Dynamic Table
+  - Drag And Drop Table
+  - Inline Edit Table
 
-[Create a repo from this template on GitHub](https://github.com/lstoeferle/vite-vue2-windicss-starter/generate)
+- Error Page
+  - 401
+  - 404
 
-### Clone 
+- Components
+  - Avatar Upload
+  - Back To Top
+  - Drag Dialog
+  - Drag Select
+  - Drag Kanban
+  - Drag List
+  - SplitPane
+  - Dropzone
+  - Sticky
+  - CountTo
 
-If you prefer to do it manually with a cleaner git history
-
-```bash
-npx degit lstoeferle/vite-vue2-windicss-starter my-vite-vue2-app
-cd my-vite-vue2-app
-pnpm run install
+- Advanced Example
+- Error Log
+- Dashboard
+- Guide Page
+- ECharts
+- Clipboard
+- Markdown to html
 ```
 
-## Usage
-
-### Development
-
-Just run and visit [http://localhost:3333](http://localhost:3333)
+## Getting started
 
 ```bash
-pnpm run dev
+# clone the project
+git clone https://github.com/PanJiaChen/vue-element-admin.git
+
+# enter the project directory
+cd vue-element-admin
+
+# install dependency
+npm install
+
+# develop
+npm run dev
 ```
 
-### Build
+This will automatically open http://localhost:9527
 
-To build the App, run
+## Build
 
 ```bash
-pnpm run build
+# build for test environment
+npm run build:stage
+
+# build for production environment
+npm run build:prod
 ```
 
-And you will see the generated files in `dist`, which are ready to be served.
+## Advanced
 
-## Why
+```bash
+# preview the release environment effect
+npm run preview
 
-Vue 3 is awesome, but we should not forget about supporting Vue 2 ♥️
+# preview the release environment effect + static resource analysis
+npm run preview -- --report
 
-### Credits
+# code format check
+npm run lint
 
-This project is inspired by [Vitesse](https://github.com/antfu/vitesse), an opinionated Vite starter template for Vue 3.
+# code format check and auto fix
+npm run lint -- --fix
+```
 
-Big thanks to [Anthony Fu](https://github.com/antfu) for the inspiration and all the amazing tools you create.
+Refer to [Documentation](https://panjiachen.github.io/vue-element-admin-site/guide/essentials/deploy.html) for more information
+
+## Changelog
+
+Detailed changes for each release are documented in the [release notes](https://github.com/PanJiaChen/vue-element-admin/releases).
+
+## Online Demo
+
+[Preview](https://panjiachen.github.io/vue-element-admin)
+
+## Donate
+
+If you find this project useful, you can buy author a glass of juice :tropical_drink:
+
+![donate](https://wpimg.wallstcn.com/bd273f0d-83a0-4ef2-92e1-9ac8ed3746b9.png)
+
+[Paypal Me](https://www.paypal.me/panfree23)
+
+[Buy me a coffee](https://www.buymeacoffee.com/Pan)
+
+## Browsers support
+
+Modern browsers and Internet Explorer 10+.
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)</br>Safari |
+| --------- | --------- | --------- | --------- |
+| IE10, IE11, Edge | last 2 versions | last 2 versions | last 2 versions |
+
+## License
+
+[MIT](https://github.com/PanJiaChen/vue-element-admin/blob/master/LICENSE)
+
+Copyright (c) 2017-present PanJiaChen

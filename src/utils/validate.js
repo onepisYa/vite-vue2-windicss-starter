@@ -1,11 +1,3 @@
-/*
- * @Author:
- * @Date: 2022-11-23 10:38:07
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-11-23 10:40:42
- * @FilePath: /vite-vue2-windicss-starter/src/utils/validate.js
- * @Description:
- */
 /**
  * Created by PanJiaChen on 16/11/18.
  */
@@ -24,7 +16,7 @@ export function isExternal(path) {
  */
 export function validUsername(str) {
   const valid_map = ['admin', 'editor']
-  return valid_map.includes(str.trim())
+  return valid_map.indexOf(str.trim()) >= 0
 }
 
 /**
@@ -77,9 +69,9 @@ export function validEmail(email) {
  * @returns {Boolean}
  */
 export function isString(str) {
-  if (typeof str === 'string' || str instanceof String)
+  if (typeof str === 'string' || str instanceof String) {
     return true
-
+  }
   return false
 }
 
@@ -88,8 +80,8 @@ export function isString(str) {
  * @returns {Boolean}
  */
 export function isArray(arg) {
-  if (typeof Array.isArray === 'undefined')
+  if (typeof Array.isArray === 'undefined') {
     return Object.prototype.toString.call(arg) === '[object Array]'
-
+  }
   return Array.isArray(arg)
 }

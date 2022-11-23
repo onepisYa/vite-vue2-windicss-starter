@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <Navbar />
-    <main>
-      <RouterView />
-    </main>
+    <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  name: 'App'
+}
+</script>

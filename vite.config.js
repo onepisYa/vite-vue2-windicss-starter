@@ -1,11 +1,4 @@
-/*
- * @Author: onepisYa pis1@qq.com
- * @Date: 2022-08-30 10:32:12
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-11-23 11:28:19
- * @FilePath: /vite-vue2-windicss-starter/vite.config.js
- * @Description: 笔记 https://gitee.com/onepisYa/vite_test/blob/master/vite-vue3-js/vite.config.js
- */
+// @Description: 笔记 https://gitee.com/onepisYa/vite_test/blob/master/vite-vue3-js/vite.config.js
 import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue2'
