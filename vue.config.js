@@ -38,6 +38,7 @@ module.exports = {
       warnings: false,
       errors: true
     },
+    // TODO: 不需要 mock 的时候记得注释掉下面
     before: require('./mock/mock-server.js')
   },
   configureWebpack: {
@@ -53,8 +54,35 @@ module.exports = {
       /* api 自动导入 */
       require('unplugin-auto-import/webpack')({ /* options */
         imports: [
-          /* '@vueuse/core', */
-          { axios: [['default', 'axios']] }
+          /* presets */
+          'vue',
+          'vue-router',
+          '@vueuse/core',
+          /* custom */
+          {
+            /*
+            '@vueuse/core': [
+              // named imports
+              'useMouse', // import { useMouse } from '@vueuse/core',
+              'useDark',
+              'useToggle',
+              // alias
+              ['useFetch', 'useMyFetch']// import { useFetch as useMyFetch } from '@vueuse/core',
+            ]
+            */
+            '@vueuse/core': [['default', 'vueuse']]
+          },
+          {
+            axios: [['default', 'axios']]
+            /*
+            编写格式
+            '[package-name]': [
+              '[import-names]',
+              // alias
+              ['[from]', '[alias]'],
+              ],
+            */
+          },
         ],
       }),
       /* 图标自动导入
@@ -77,10 +105,20 @@ module.exports = {
           })
         ],
         dts: false,
-        dirs: ['src/components'],
+        dirs: ['src/components', ],
         deep: true
       }),
     ],
+    module: {
+      /* autoimport vueuse 在 cli 可能遇到问题，配置之后会好。
+      https://github.com/vueuse/vueuse/issues/718 解决方案出处
+      */
+      rules: [{
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto'
+      }]
+    }
   },
   chainWebpack(config) {
     // it can improve the speed of the first screen, it is recommended to turn on preload
