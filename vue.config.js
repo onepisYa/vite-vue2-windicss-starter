@@ -2,6 +2,8 @@
 const path = require('path')
 const defaultSettings = require('./src/settings.js')
 
+const IconsResolver = require('unplugin-icons/resolver')
+
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
@@ -46,7 +48,39 @@ module.exports = {
       alias: {
         '@': resolve('src')
       }
-    }
+    },
+    plugins: [
+      /* api 自动导入 */
+      require('unplugin-auto-import/webpack')({ /* options */
+        imports: [
+          /* '@vueuse/core', */
+          { axios: [['default', 'axios']] }
+        ],
+      }),
+      /* 图标自动导入
+        图标配置 插件配置
+        图标链接
+        https://icones.js.org/
+        图标安装
+        pnpm i -D @iconify/json
+        使用示例 i 是前缀 mdi 是图标集名字 后面是图标名字
+        mdi:account-box
+        <i-mdi-account-box style="font-size: 2em; color: red"/>
+      */
+      require('unplugin-icons/webpack')({ /* options */ }),
+      /* 组件自动导入 */
+      require('unplugin-vue-components/webpack')({ /* options */
+        resolvers: [
+          IconsResolver({
+            componentPrefix: 'pis'
+            // {prefix}-{collection}-{icon}
+          })
+        ],
+        dts: false,
+        dirs: ['src/components'],
+        deep: true
+      }),
+    ],
   },
   chainWebpack(config) {
     // it can improve the speed of the first screen, it is recommended to turn on preload

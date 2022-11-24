@@ -1,14 +1,14 @@
 <!--
  * @Author:
  * @Date: 2022-11-23 19:15:36
- * @LastEditors:
- * @LastEditTime: 2022-11-23 19:55:26
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-11-23 20:07:26
  * @FilePath: /vite-vue2-windicss-starter/src/components/Test/index.vue
  * @Description:
 -->
 <script setup>
 import { ref } from 'vue'
-const foo = ref(22)
+const foo = ref("composition api test")
 </script>
 
 <script>
@@ -55,6 +55,10 @@ export default defineComponent({
       type="button"
       class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
     >Purple</button>
+    <button
+      type="button"
+      class="testAt focus:outline-none text-white bg-blue-500 hover:bg-purple-800 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+    >TestAt</button>
 
   </div>
 </template>
@@ -68,9 +72,9 @@ export default defineComponent({
   outline: auto;
 }
 
-button:focus{
+.testAt:focus{
 // outline: 3px solid orange;
-  @apply bg-blue-500 hover:bg-blue-700 text-white;
+  @apply bg-blue-500 hover:bg-pink-300 text-white;
 }
 
 </style>
